@@ -1,30 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Database, Server, Code, Layers } from "lucide-react";
-import { Variants } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Code, Server, Database, Layers } from 'lucide-react';
 
-const item: Variants = { // Adding :Variants here can resolve auto-assignment confusion
-  hidden: { opacity: 0, y: 20 },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5, ease: "easeOut" } 
-  },
-};
-export default function Skills() {
+const Skills = () => {
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
+        staggerChildren: 0.1
+      }
+    }
   };
 
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
 
-};
   return (
     <section id="skills" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -51,7 +46,7 @@ export default function Skills() {
             </div>
             <h3 className="text-2xl font-semibold">MERN Stack</h3>
             <p className="text-muted-foreground text-sm flex-1">
-              Building highly interactive, responsive interfaces React (Vite/Next.js). Strong backend services using Node.js & Express with MongoDB.
+              Building highly interactive, responsive interfaces with React (Vite/Next.js). Strong backend services using Node.js & Express with MongoDB.
             </p>
           </motion.div>
 
@@ -110,4 +105,6 @@ export default function Skills() {
       </div>
     </section>
   );
-}
+};
+
+export default Skills;
