@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Matada Ajjaiah | Full Stack Developer Portfolio
+Welcome to the source code of my personal portfolio. This project showcases my expertise in the MERN stack and Spring Boot, designed with a focus on modern UI/UX and robust security.
 
-## Getting Started
+Key Features
+Modern Interface: Built with a Google-inspired aesthetic using glassmorphism and fluid animations.
 
-First, run the development server:
+Interactive Projects: Showcases HMS VitalCure, ArchLync, and other full-stack applications with dynamic link integration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Dynamic Backgrounds: Features scroll-triggered patterns including gradients and checkerboards.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mobile-First Design: Fully responsive and accessible across all device types.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Hardened Security: Implements strict Content Security Policies (CSP) and server-level headers.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tech Stack
+Frontend: Next.js, TypeScript, Tailwind CSS
 
-## Learn More
+Animations: Framer Motion
 
-To learn more about Next.js, take a look at the following resources:
+Icons: Lucide React
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deployment: Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deployment & Domain Management
+This site is optimized for Vercel deployment linked to the custom subdomain matada.ajjaiah.dev.
 
-## Deploy on Vercel
+Branding Protection: Configured via next.config.js to redirect all default vercel.app traffic to the custom domain.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Continuous Integration: Every push to the main branch triggers an automatic secure build.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Analytics: Privacy-compliant tracking is enabled via Vercel Web Analytics to monitor visitor traffic without using intrusive cookies.
+
+Security Best Practices
+Do
+Use Environment Variables: Always store sensitive keys in the Vercel dashboard, never in the code.
+
+Sanitize Input: Use DOMPurify for any user-facing forms to prevent XSS.
+
+Audit Dependencies: Regularly run npm audit to patch known vulnerabilities.
+
+Monitor Traffic: Use the built-in analytics to check for unusual access patterns.
+
+Don't
+Commit .env Files: Ensure .env and .env.local are included in your .gitignore.
+
+Hardcode API Keys: Avoid placing plain-text secrets in your components.
+
+Allow Iframing: The security configuration explicitly denies X-Frame-Options to prevent clickjacking.
+
+Use Insecure Scripts: Only load external libraries via trusted CDNs with Subresource Integrity (SRI) hashes.
+
+Contact Information
+LinkedIn: Matada Ajjaiah
+
+Designed and Developed by Matada Ajjaiah. © 2026 All Rights Reserved.
