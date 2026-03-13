@@ -2,7 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Database, Server, Code, Layers } from "lucide-react";
+import { Variants } from 'framer-motion';
 
+const item: Variants = { // Adding :Variants here can resolve auto-assignment confusion
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.5, ease: "easeOut" } 
+  },
+};
 export default function Skills() {
   const container = {
     hidden: { opacity: 0 },
@@ -14,15 +23,8 @@ export default function Skills() {
     },
   };
 
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.5, ease: "easeOut" } // Use "easeOut", "easeInOut", or "circOut"
-    },
-  };  
 
+};
   return (
     <section id="skills" className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
