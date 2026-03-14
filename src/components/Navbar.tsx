@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -77,6 +78,18 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden glass absolute top-full left-0 right-0 flex flex-col items-center justify-center gap-8 text-xl font-medium border-t border-white/10"
           >
+            {/* Profile Picture above tabs */}
+            <div className="relative w-32 h-32 rounded-full p-1 bg-white shadow-[0_10px_30px_rgb(0,0,0,0.1)] border border-gray-100 flex items-center justify-center overflow-hidden shrink-0 mb-4">
+              <Image
+                src="/profile.png"
+                alt="Matada Ajjaiah"
+                fill
+                className="object-cover object-center scale-[1.05] rounded-full"
+                unoptimized
+                priority
+              />
+            </div>
+
             {navLinks.map((link, idx) => (
               <a
                 key={idx}

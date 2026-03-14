@@ -63,7 +63,7 @@ export default function Hero() {
         <div className="absolute inset-0 backdrop-blur-[60px]" />
       </motion.div>
 
-      <div className="container mx-auto px-6 max-w-7xl relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 pt-28 md:pt-0 max-w-7xl relative z-10 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
