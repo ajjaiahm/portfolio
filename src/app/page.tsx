@@ -6,10 +6,12 @@ import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import BackgroundPatterns from "@/components/BackgroundPatterns";
+import Preloader from "@/components/Preloader";
 
 export default function Home() {
   return (
     <main className="min-h-screen relative">
+      <Preloader />
       <BackgroundPatterns />
       <Navbar />
       <Hero />
