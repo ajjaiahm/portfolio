@@ -28,6 +28,7 @@ const projects: Project[] = [
       "Engineered an offline DeepSearch AI model trained to perform intelligent data discovery, deep pattern recognition, and anomaly detection across large unstructured datasets using advanced deep learning techniques.",
     tools: ["Node", "React (Vite)", "Google Gemini API", "NLP Pipelines", "Postman"],
     github: "https://github.com/AbbasMSadikot/Hack-O-Ween",
+    demo: "https://vimeo.com/1151299382?fl=ip&fe=ec",
   },
   {
     title: "Karnaugh Map Solver",
